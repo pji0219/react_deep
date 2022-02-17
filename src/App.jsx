@@ -49,6 +49,11 @@ function App() {
 
   const onChange = useCallback((event) => {
     const { name, value } = event.target;
+    dispatch({
+      type: 'CHANGE_INPUT',
+      name,
+      value,
+    });
   }, []);
 
   return (
